@@ -56,9 +56,6 @@ Test set (32,470 passengers, never used for fitting or tuning). Precision, recal
 
 More figures (histograms, boxplots, correlation matrix, learning curves, LR coefficients) are in [`Images/`](Images/) and in the notebook.
 
-## What changed from the course version
-The original 2023-2024 submission fitted imputation, feature selection and outlier bounds on the full dataset before the train/test split, so the test set influenced preprocessing. In 2026 the notebook was restructured to split first and fit every step on the training set only, and a few other issues were fixed: ROC curves now use the tuned models instead of the default ones, the learning curves use all the tuned parameters, `random_state` is fixed everywhere, and a majority-class baseline was added. The headline test accuracies did not change at two decimals (0.87 / 0.96 / 0.96), but the test set is now a true hold-out (32,470 rows instead of 31,754 after outlier removal).
-
 ## How to run
 Tested with Python 3.13.2 on Windows.
 
